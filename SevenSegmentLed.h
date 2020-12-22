@@ -8,12 +8,11 @@ class SevenSegmentLed
 {
 public:
     Kernel::Clock::duration_u32 scroll_interval_ms;
-    PinName b LED b pin
-
     SevenSegmentLed(PinName a, PinName b, PinName c, PinName d, PinName e, PinName f, PinName g, PinName dp);
     void write_number(unsigned int number);
     void scroll(unsigned int number);
     void scroll(std::string number);
+    void off();
     SevenSegmentLed &operator=(unsigned int number)
     {
         write_number(number);

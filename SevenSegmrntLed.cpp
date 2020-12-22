@@ -52,3 +52,8 @@ void SevenSegmentLed::scroll(std::string number)
     }
     this->segment_leds = 0;
 }
+
+void SevenSegmentLed::off()
+{
+    this->segment_leds = 0;
+}
