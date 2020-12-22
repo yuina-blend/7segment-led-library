@@ -44,6 +44,18 @@ name.scroll(std::string number);
 
 複数桁の数値を上位桁から順に表示します。
 
+```cpp
+name.scroll(123456789);
+```
+
+<img src="image/test1.GIF" height=250>
+
+```cpp
+name.scroll("3.141592");
+```
+
+![](image/test2.GIF)
+
 ## 表示間隔
 
 | name.scroll_interval_ms | LED点滅の周期 |
