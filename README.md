@@ -1,2 +1,66 @@
 # 7segment-led-library
-7セグメントLEDのMbed library
+
+# 概要
+
+7セグメントLEDで数字を表示するライブラリです。
+
+[使用したLEDのデータシート](https://akizukidenshi.com/download/ds/paralight/C-551SRD.pdf)
+
+# 使い方
+
+各開発環境(Mbed Compiler, Mbed Studio, PlatformIO, etc...)に、このライブラリをインポートして下さい。
+
+# リファレンス
+
+## 初期化
+
+```cpp
+SevenSegmentLed name(PinName a, PinName b, PinName c, PinName d, PinName e, PinName f, PinName g, PinName dp);
+```
+
+| name             | インスタンス名          |
+| ---------------- | ---------------- |
+| **PinName a~dp** | **a~dpに対応するpin（データシート参照）** |
+
+## 数字出力
+
+```cpp
+name = 1~9;
+name.write_number(1~9);
+```
+
+1~9の数字をLEDに表示させます。
+
+## 数字出力（複数桁）
+
+```cpp
+name.scroll(unsigned int number);
+name.scroll(std::string number);
+```
+
+| unsigned int number    | 表示する数値（整数） |
+| ---------------------- | ---------- |
+| **std::string number** | **表示する数値（実数）** |
+
+複数桁の数値を上位桁から順に表示します。
+
+## 表示間隔
+
+| name.scroll_interval_ms | LED点滅の周期 |
+|-|-|
+
+`scroll`の点滅の間隔を指定します。（デフォルト500ms）
+
+## 消灯
+
+```cpp
+name.off()
+```
+
+LEDを消灯させます。
+
+## サンプルコード
+
+```cpp
+```
+
