@@ -54,13 +54,37 @@ name.scroll(std::string number);
 ## 消灯
 
 ```cpp
-name.off()
+name.off_led()
 ```
 
-LEDを消灯させます。
+LEDをすべて消灯させます。
 
 ## サンプルコード
 
 ```cpp
+#include "mbed.h"
+#include "SevenSegmentLed.h"
+
+SevenSegmentLed seg_led(D4, D5, D11, D7, D8, D9, D10, D12);
+
+void rest()
+{
+    seg_led.off_led();
+    ThisThread::sleep_for(1s);
+}
+
+int main()
+{
+    while (true)
+    {
+        seg_led.write_number(5);
+        ThisThread::sleep_for(1s);
+        rest();
+        seg_led.scroll(123456789);
+        rest();
+        seg_led.scroll("3.141592");
+        rest();
+    }
+}
 ```
 
