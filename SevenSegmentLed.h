@@ -12,7 +12,7 @@ public:
     void write_number(unsigned int number);
     void scroll(unsigned int number);
     void scroll(std::string number);
-    void off();
+    void off_led();
     SevenSegmentLed &operator=(unsigned int number)
     {
         write_number(number);
@@ -32,7 +32,6 @@ protected:
         0b00100111,
         0b01111111,
         0b01101111};
-    const int off = 0b00000000;
 };
 
 #endif

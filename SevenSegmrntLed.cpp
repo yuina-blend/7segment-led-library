@@ -27,12 +27,11 @@ void SevenSegmentLed::scroll(unsigned int number)
     {
         this->write_number(pattern[i]);
         ThisThread::sleep_for(scroll_interval_ms);
-        segment_leds.write(this->off);
+        segment_leds.write(0);
         ThisThread::sleep_for(100ms);
     }
     delete[] pattern;
 }
-
 
 void SevenSegmentLed::scroll(std::string number)
 {
@@ -53,7 +52,7 @@ void SevenSegmentLed::scroll(std::string number)
     this->segment_leds = 0;
 }
 
-void SevenSegmentLed::off()
+void SevenSegmentLed::off_led()
 {
     this->segment_leds = 0;
 }
