@@ -35,12 +35,13 @@ name.write_number(1~9);
 
 ```cpp
 name.scroll(unsigned int number);
-name.scroll(std::string number);
+name.scroll(double number, unsigned int significant_figures)
 ```
 
-| unsigned int number    | 表示する数値（整数） |
-| ---------------------- | ---------- |
-| **std::string number** | **表示する数値（実数）** |
+| unsigned int number                  | 表示する数値（整数）     |
+| ------------------------------------ | -------------- |
+| **double number**                    | **表示する数値（実数）** |
+| **unsigned int significant_figures** |        **有効桁数**        |
 
 複数桁の数値を上位桁から順に表示します。
 
@@ -51,7 +52,7 @@ name.scroll(123456789);
 <img src="image/test1.GIF" height=250>
 
 ```cpp
-name.scroll("3.141592");
+name.scroll(3.141592, 7);
 ```
 
 ![](image/test2.GIF)
