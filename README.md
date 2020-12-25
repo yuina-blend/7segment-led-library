@@ -20,7 +20,7 @@ SevenSegmentLed name(PinName a, PinName b, PinName c, PinName d, PinName e, PinN
 | ---------------- | ---------------- |
 | **PinName a~dp** | **a~dpに対応するpin（データシート参照）** |
 
-> ![](image/2020-12-25-09-15-11.png)
+> <img src="image/2020-12-25-09-15-11.png" height=320px>
 >
 > データシートより引用（[https://akizukidenshi.com/download/ds/paralight/C-551SRD.pdf](https://akizukidenshi.com/download/ds/paralight/C-551SRD.pdf)）
 
