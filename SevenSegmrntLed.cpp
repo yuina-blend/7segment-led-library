@@ -37,7 +37,7 @@ void SevenSegmentLed::scroll(double number, unsigned int significant_figures)
 {
     std::string number_str = std::to_string(number);
     std::string tmp;
-    for (int i = 0; i < digit + 1; i++)
+    for (int i = 0; i < significant_figures + 1; i++)
     {
         if (number_str[i] == '.')
         {
