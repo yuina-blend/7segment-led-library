@@ -1,8 +1,6 @@
-# 7segment-led-library
-
 # 概要
 
-7セグメントLEDで数字を表示するライブラリです。
+カソードコモンの7セグメントLEDで数字を表示するライブラリです。
 
 [使用したLEDのデータシート](https://akizukidenshi.com/download/ds/paralight/C-551SRD.pdf)
 
@@ -21,6 +19,10 @@ SevenSegmentLed name(PinName a, PinName b, PinName c, PinName d, PinName e, PinN
 | name             | インスタンス名          |
 | ---------------- | ---------------- |
 | **PinName a~dp** | **a~dpに対応するpin（データシート参照）** |
+
+> ![](image/2020-12-25-09-15-11.png)
+>
+> データシートより引用（[https://akizukidenshi.com/download/ds/paralight/C-551SRD.pdf](https://akizukidenshi.com/download/ds/paralight/C-551SRD.pdf)）
 
 ## 数字出力
 
