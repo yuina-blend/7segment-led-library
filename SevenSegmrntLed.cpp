@@ -33,18 +33,19 @@ void SevenSegmentLed::scroll(unsigned int number)
     delete[] pattern;
 }
 
-void SevenSegmentLed::scroll(std::string number)
+void SevenSegmentLed::scroll(double number, unsigned int significant_figures)
 {
+    std::string number_str = std::to_string(number);
     std::string tmp;
-    for (int i = 0; i < number.length(); i++)
+    for (int i = 0; i < digit + 1; i++)
     {
-        if (number[i] == '.')
+        if (number_str[i] == '.')
         {
             this->segment_leds = 0b10000000;
         }
         else
         {
-            tmp = number[i];
+            tmp = number_str[i];
             this->write_number(std::stoi(tmp));
         }
         ThisThread::sleep_for(this->scroll_interval_ms);

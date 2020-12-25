@@ -11,7 +11,7 @@ public:
     SevenSegmentLed(PinName a, PinName b, PinName c, PinName d, PinName e, PinName f, PinName g, PinName dp);
     void write_number(unsigned int number);
     void scroll(unsigned int number);
-    void scroll(std::string number);
+    void scroll(double number, unsigned int significant_figures);
     void off_led();
     SevenSegmentLed &operator=(unsigned int number)
     {
